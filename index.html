@@ -46,6 +46,7 @@
         <div class="legend-item"><span class="legend-color" style="background: green;"></span> 0-5 Jahre</div>
         <div class="legend-item"><span class="legend-color" style="background: yellow;"></span> 5-10 Jahre</div>
         <div class="legend-item"><span class="legend-color" style="background: black;"></span> 10-15 Jahre</div>
+        <div class="legend-item"><span class="legend-color" style="background: blue;"></span> 15-20 Jahre</div>
     </div>
     
     <div id="map"></div>
@@ -66,8 +67,10 @@
                         farbe = 'green';
                     } else if (pin.alter <= 10) {
                         farbe = 'yellow';
-                    } else {
+                    } else if (pin.alter <= 15) {
                         farbe = 'black';
+                    } else if (pin.alter <= 20) {
+                        farbe = 'blue';
                     }
                     
                     L.circleMarker([pin.lat, pin.lng], {
