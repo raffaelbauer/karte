@@ -1,0 +1,2 @@
+lat: Breitengrad
+lng: Längengrad
